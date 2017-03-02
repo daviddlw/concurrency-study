@@ -7,7 +7,7 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>concurrency-demo</name>
+	<name>concurrency-study</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -23,65 +23,154 @@
 		<commons-dbcp.version>1.4</commons-dbcp.version>
 		<commons-logging.version>1.1.3</commons-logging.version>
 		<org.aspectj.version>1.7.4</org.aspectj.version>
+		<commons-codec.version>1.9</commons-codec.version>
+		<guava.version>18.0</guava.version>
+		<commons-net.version>3.3</commons-net.version>
+		<commons-logging.version>1.1.1</commons-logging.version>
+		<taglibs.version>1.1.2</taglibs.version>
+		<gson.version>2.2.4</gson.version>
+		<javax.servlet.version>3.1.0</javax.servlet.version>
+		<commons-lang3.version>3.3.2</commons-lang3.version>
+		<mysql.version>5.1.26</mysql.version>
+		<dom4j.version>1.6.1</dom4j.version>
+		<protostuff-core.version>1.0.11</protostuff-core.version>
+		<protobuf-java.version>2.6.1</protobuf-java.version>
+		<netty-all.version>4.0.32.Final</netty-all.version>
+		<c3p0.version>0.9.1.2</c3p0.version>
+		<mahout.version>0.9</mahout.version>
+		<hessian.version>4.0.7</hessian.version>
 	</properties>
 
 	<dependencies>
+		<!-- Test dependencies Start -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- Test dependencies End -->
 
-		<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+		<!-- Third parites dependencies Start -->
+		<dependency>
+			<groupId>org.apache.mahout</groupId>
+			<artifactId>mahout-core</artifactId>
+			<version>${mahout.version}</version>
+		</dependency>
+		<!-- <dependency> <groupId>org.apache.mahout</groupId> <artifactId>mahout-math</artifactId> 
+			<version>${mahout.version}</version> </dependency> -->
+		<dependency>
+			<groupId>com.caucho</groupId>
+			<artifactId>hessian</artifactId>
+			<version>${hessian.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>${commons-net.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version></version>
+		</dependency>
+
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>${taglibs.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>${gson.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
-			<version>1.9</version>
+			<version>${commons-codec.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>18.0</version>
+			<version>${guava.version}</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>dom4j</groupId>
 			<artifactId>dom4j</artifactId>
-			<version>1.6.1</version>
+			<version>${dom4j.version}</version>
 		</dependency>
 
-<dependency>
-    <groupId>com.dyuproject.protostuff</groupId>
-    <artifactId>protostuff-core</artifactId>
-    <version>1.0.11</version>
-</dependency>
+		<dependency>
+			<groupId>com.dyuproject.protostuff</groupId>
+			<artifactId>protostuff-core</artifactId>
+			<version>${protostuff-core.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>com.google.protobuf</groupId>
 			<artifactId>protobuf-java</artifactId>
-			<version>2.6.1</version>
+			<version>${protobuf-java.version}</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>io.netty</groupId>
 			<artifactId>netty-all</artifactId>
-			<version>4.0.32.Final</version>
+			<version>${netty-all.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.26</version>
+			<version>${mysql.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.3.2</version>
+			<version>${commons-lang3.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
+			<version>${javax.servlet.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>${jedis.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.flexjson</groupId>
+			<artifactId>flexjson</artifactId>
+			<version>${flexjson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>${org.aspectj.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${org.aspectj.version}</version>
+		</dependency>
+
+		<!-- Third parites dependencies End -->
 
 		<!-- db-pool start -->
 		<dependency>
@@ -89,11 +178,13 @@
 			<artifactId>commons-dbcp</artifactId>
 			<version>${commons-dbcp.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>c3p0</groupId>
 			<artifactId>c3p0</artifactId>
-			<version>0.9.1.2</version>
+			<version>${c3p0.version}</version>
 		</dependency>
+
 		<!-- db-pool end -->
 
 		<!-- mybaits begin -->
@@ -182,20 +273,6 @@
 			<version>${commons-logging.version}</version>
 		</dependency>
 
-		<!-- SPRING end -->
-
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>${log4j.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>net.sourceforge.javacsv</groupId>
-			<artifactId>javacsv</artifactId>
-			<version>2.0</version>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
@@ -203,68 +280,8 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>redis.clients</groupId>
-			<artifactId>jedis</artifactId>
-			<version>${jedis.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>net.sf.flexjson</groupId>
-			<artifactId>flexjson</artifactId>
-			<version>${flexjson.version}</version>
-		</dependency>
+		<!-- SPRING end -->
 
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjrt</artifactId>
-			<version>${org.aspectj.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjweaver</artifactId>
-			<version>${org.aspectj.version}</version>
-		</dependency>
-
-		<!-- Test dependencies Start -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<!-- Test dependencies End -->
-
-		<dependency>
-			<groupId>commons-net</groupId>
-			<artifactId>commons-net</artifactId>
-			<version>3.3</version>
-		</dependency>
-
-		<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging</artifactId>
-			<version>1.1.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>taglibs</groupId>
-			<artifactId>standard</artifactId>
-			<version>1.1.2</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<version>2.2.4</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.caucho</groupId>
-			<artifactId>hessian</artifactId>
-			<version>4.0.7</version>
-		</dependency>
-		
 	</dependencies>
 
 	<build>
