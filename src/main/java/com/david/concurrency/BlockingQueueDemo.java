@@ -51,7 +51,13 @@ class Producer extends Thread
 		String message = StringUtils.EMPTY;
 		for (Integer num : list)
 		{
-			flag = queue.offer(num);
+//			flag = queue.offer(num);
+			try {
+				queue.put(num);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			message = String.format("Producer offer a number: %d, flag = %s",
 					num, flag);
 			System.out.println(message);
