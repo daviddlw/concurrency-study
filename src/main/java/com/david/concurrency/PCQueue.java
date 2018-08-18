@@ -104,8 +104,6 @@ public class PCQueue<T> {
 			// 添加poll锁
 			takeLock.lockInterruptibly();
 			while (rsCount.get() == 0) {
-//				System.out.println("take-rsCount="+rsCount.get());
-//				takeCondition.await();
 				takeCondition.await(1, TimeUnit.SECONDS);
 			}
 			obj = dequeue();

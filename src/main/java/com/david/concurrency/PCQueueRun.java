@@ -10,14 +10,14 @@ public class PCQueueRun {
 		PCQueue<Integer> pcQueue = new PCQueue<>(2);
 		PCProducer<Integer> pcProducer = new PCProducer<Integer>(pcQueue, list);
 		PCConsumer<Integer> pcConsumer = new PCConsumer<Integer>(pcQueue);
-		PCConsumer<Integer> pcConsumer2 = new PCConsumer<Integer>(pcQueue);
+//		PCConsumer<Integer> pcConsumer2 = new PCConsumer<Integer>(pcQueue);
 		System.err.println("producer-consumer start...");
 		pcProducer.setName("pcProducer-thread");
 		pcConsumer.setName("pcConsumer-thread");
-		pcConsumer2.setName("pcConsumer2-thread");
+//		pcConsumer2.setName("pcConsumer2-thread");
 		pcProducer.start();
 		pcConsumer.start();
-		pcConsumer2.start();
+//		pcConsumer2.start();
 		pcProducer.join();
 //		ExecutorService exec = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 //		exec.execute(pcProducer);
